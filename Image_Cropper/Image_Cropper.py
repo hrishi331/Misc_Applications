@@ -49,7 +49,7 @@ with ZipFile(zip_buffer,'a') as file:
         img_byte = BytesIO()
         r.save(img_byte,format='JPEG')
         img_byte.seek(0)
-        file.writestr(zinfo_or_arcname=str(name),data=img_byte.read())
+        file.writestr(zinfo_or_arcname=f"{name}.jpg",data=img_byte.read())
 zip_buffer.seek(0)
 
     
